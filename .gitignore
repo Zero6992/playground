@@ -1,3 +1,4 @@
-*
-*/
-!.gitignore
+node_modules
+MNIST Dataset JPG format
+jsdc-dui
+Discordbot
