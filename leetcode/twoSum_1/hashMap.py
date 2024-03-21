@@ -1,4 +1,4 @@
-def twoSum(self, nums, target):
+def twoSum(nums, target):
   map = {}
   for index, value in enumerate(nums):
     remaining = target - value
