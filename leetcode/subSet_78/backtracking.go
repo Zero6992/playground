@@ -1,14 +1,13 @@
 package main
 
-func subsets(num []int) [][]int {
+func subsets(nums []int) [][]int {
 	output := [][]int{{}}
 	for _, num := range nums {
-		newSubsets := make([][]int, 0)
+		newSubsets := [][]int{}
 		for _, curr := range output {
-			subset := make([]int, len(curr)+1)
-			copy(subset, curr)
-			subset[len(curr)] = num
-			newSubsets = append(newSubsets, subset)
+			newSubset := append([]int{}, curr...)
+			newSubset = append(newSubset, num)
+			newSubsets = append(newSubsets, newSubset)
 		}
 		output = append(output, newSubsets...)
 	}

@@ -4,7 +4,3 @@ def subsets(nums: list[int]) -> list[list[int]]:
         output += [curr + [num] for curr in output]
     return output
 
-
-
-
-
