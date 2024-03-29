@@ -15,12 +15,10 @@ class Solution:
                 right -= 1
             else:
                 current += 1
-        
+
         return
-    
 
 testCase = [2,0,2,1,1,0]
 
 Solution.sortColors(testCase)
 print(testCase)
-            
