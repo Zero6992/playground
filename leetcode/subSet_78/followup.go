@@ -6,7 +6,7 @@ import (
 )
 
 func distributeElements(array []int) ([]int, []int) {
-	sort.Sort(sort.Reverse(sort.IntSlice(array)))
+	sort.Sort((sort.Reverse(sort.IntSlice(array))))
 	A, B := []int{}, []int{}
 	sumA, sumB := 0, 0
 
@@ -19,12 +19,14 @@ func distributeElements(array []int) ([]int, []int) {
 			sumB += value
 		}
 	}
-
+	if sumA < sumB {
+		A, B = B, A
+	}
 	return A, B
 }
 
 func main() {
-	array := []int{3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 14}
+	array := []int{3, 2, 4, 2, 5, 9, 2, 6, 5, 3, 2, 3, 10}
 	A, B := distributeElements(array)
 	fmt.Println("A:", A, "Sum of A:", sum(A))
 	fmt.Println("B:", B, "Sum of B:", sum(B))
